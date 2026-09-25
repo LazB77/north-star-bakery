@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Products</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body class="products">
 <a class="skip" href="#main">Skip to content</a>
@@ -46,6 +47,24 @@
         <section>
             <h2>Planning an Order?</h2>
             <p>Online checkout is not required. Visit our <a href="contact.html">Contact and Pre-Orders page</a> to request a pickup date, tell us what you need, and share any allergy notes that may be relevant.</p>
+        </section>
+
+        <section class="order-builder" aria-labelledby="order-builder-title">
+            <h2 id="order-builder-title">Build a Quick Pre-Order</h2>
+            <p>Choose bakery favorites and quantities to prepare an order request. Your selections are saved in this browser so you can return later without starting over.</p>
+
+            <div id="order-options" class="order-options" aria-live="polite"></div>
+
+            <div class="order-summary" aria-labelledby="order-summary-title">
+                <h3 id="order-summary-title">Your Order Summary</h3>
+                <ul id="order-summary-list">
+                    <li>No items selected yet.</li>
+                </ul>
+                <p><strong>Estimated total: <span id="order-total">$0.00</span></strong></p>
+                <p id="order-save-status" class="status-message" role="status">Selections save automatically on this device.</p>
+                <a class="button-link" href="contact.html">Continue to Contact Form</a>
+                <button type="button" id="clear-order" class="secondary-button">Clear Saved Order</button>
+            </div>
         </section>
     </main>
 
