@@ -125,6 +125,9 @@ function clearSavedOrder() {
 function attachOrderListeners() {
     document.querySelectorAll(".item-choice, .item-quantity").forEach((control) => {
         control.addEventListener("change", handleOrderControls);
+        if (control.classList.contains("item-quantity")) {
+            control.addEventListener("input", handleOrderControls);
+        }
     });
 }
 
